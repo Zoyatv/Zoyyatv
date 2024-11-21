@@ -1,8 +1,17 @@
-/*scroll effect html*/
-html {
-    scroll-behavior: smooth;
-}
 /* Body Styling with Smooth Gradient */
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ffccff, #ff80bf);
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
+    scroll-behavior: smooth;
+    height: auto; /* Allow content to dictate height */
+    min-height: 116vh; /* Ensure viewport height at minimum */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
@@ -13,7 +22,9 @@ body {
     padding: 0;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 @keyframes gradientAnimation {
@@ -67,7 +78,7 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    margin-top: 30px;
+    margin-top: 10px;
     border: 8px solid #ff99cc;
     box-shadow: 0 8px 16px rgba(255, 105, 180, 0.5);
     animation: fadeIn 2s ease-in-out;
