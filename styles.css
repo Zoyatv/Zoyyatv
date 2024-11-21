@@ -8,7 +8,7 @@ html {
     animation: gradientAnimation 12s ease infinite;
     scroll-behavior: smooth;
     height: auto; /* Allow content to dictate height */
-    min-height: 116vh; /* Ensure viewport height at minimum */
+    min-height: 101vh; /* Ensure viewport height at minimum */
     overflow-y: auto; /* Allow vertical scrolling */
 }
 
