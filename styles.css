@@ -7,8 +7,8 @@ html {
     background-size: 400% 400%;
     animation: gradientAnimation 12s ease infinite;
     scroll-behavior: smooth;
-    height: auto; /* Allow content to dictate height */
-    min-height: 101vh; /* Ensure viewport height at minimum */
+    height: 100vh; /* Allow content to dictate height */
+    min-height: auto; /* Ensure viewport height at minimum */
     overflow-y: auto; /* Allow vertical scrolling */
 }
 
