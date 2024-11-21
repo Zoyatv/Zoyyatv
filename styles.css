@@ -1,3 +1,7 @@
+/*scroll effect html*/
+html {
+    scroll-behavior: smooth;
+}
 /* Body Styling with Smooth Gradient */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
