@@ -1,23 +1,41 @@
+// Adjust the viewport meta tag for responsive sizing
+function adjustViewport() {
+    const viewportMeta = document.querySelector('meta[name="viewport"]');
+    if (!viewportMeta) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        document.head.appendChild(meta);
+    } else {
+        viewportMeta.content = 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no';
+    }
+}
+
+// Call the function to ensure proper sizing
+adjustViewport();
+
+// Other JS code remains unchanged
+
 // Dynamic Greeting Based on Time with Animation
 window.onload = () => {
     const hours = new Date().getHours();
     let greeting;
-        if (hours >= 0 && hours < 5) {
-            greeting = "Good Night, Cuties!";
-        } else if (hours >= 5 && hours < 8) {
-            greeting = "Good Morning, Cuties!";
-        } else if (hours >= 8 && hours < 12) {
-            greeting = "Good Morning, Cuties!";
-        } else if (hours >= 12 && hours < 15) {
-            greeting = "Good Afternoon, Cuties!";
-        } else if (hours >= 15 && hours < 17) {
-            greeting = "Good Afternoon, Cuties!";
-        } else if (hours >= 17 && hours < 20) {
-            greeting = "Good Evening, Cuties!";
-        } else {
-            greeting = "Good Night, Cuties!";
-        }
-    
+    if (hours >= 0 && hours < 5) {
+        greeting = "Good Night, Cuties!";
+    } else if (hours >= 5 && hours < 8) {
+        greeting = "Good Morning, Cuties!";
+    } else if (hours >= 8 && hours < 12) {
+        greeting = "Good Morning, Cuties!";
+    } else if (hours >= 12 && hours < 15) {
+        greeting = "Good Afternoon, Cuties!";
+    } else if (hours >= 15 && hours < 17) {
+        greeting = "Good Afternoon, Cuties!";
+    } else if (hours >= 17 && hours < 20) {
+        greeting = "Good Evening, Cuties!";
+    } else {
+        greeting = "Good Night, Cuties!";
+    }
+
     const greetingElement = document.createElement("p");
     greetingElement.textContent = greeting;
     greetingElement.style.fontSize = "3em";
@@ -136,26 +154,3 @@ darkModeStyle.innerHTML = `
     }
 `;
 document.head.append(darkModeStyle);
-
-// Sparkly Background Effect (Optional)
-const sparkles = () => {
-    const sparkle = document.createElement("div");
-    sparkle.classList.add("sparkle");
-    document.body.append(sparkle);
-    setTimeout(() => sparkle.remove(), 2000);
-};
-
-setInterval(sparkles, 1000);
-function adjustViewport() {
-    const viewportMeta = document.querySelector('meta[name="viewport"]');
-    if (!viewportMeta) {
-        const meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, initial-scale=1.0';
-        document.head.appendChild(meta);
-    } else {
-        viewportMeta.content = 'width=device-width, initial-scale=1.0';
-    }
-}
-
-adjustViewport();
