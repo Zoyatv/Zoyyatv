@@ -2,14 +2,22 @@
 window.onload = () => {
     const hours = new Date().getHours();
     let greeting;
-    if (hours < 12) {
-        greeting = "Good Morning, Cuties!";
-    } else if (hours < 18) {
-        greeting = "Good Afternoon, Cuties!";
-    } else {
-        greeting = "Good Evening, Cuties!";
-    }
-
+        if (hours >= 0 && hours < 5) {
+            greeting = "Good Night, Cuties!";
+        } else if (hours >= 5 && hours < 8) {
+            greeting = "Good Morning, Cuties!";
+        } else if (hours >= 8 && hours < 12) {
+            greeting = "Good Morning, Cuties!";
+        } else if (hours >= 12 && hours < 15) {
+            greeting = "Good Afternoon, Cuties!";
+        } else if (hours >= 15 && hours < 17) {
+            greeting = "Good Afternoon, Cuties!";
+        } else if (hours >= 17 && hours < 20) {
+            greeting = "Good Evening, Cuties!";
+        } else {
+            greeting = "Good Night, Cuties!";
+        }
+    
     const greetingElement = document.createElement("p");
     greetingElement.textContent = greeting;
     greetingElement.style.fontSize = "3em";
