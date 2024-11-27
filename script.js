@@ -359,3 +359,29 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(createFloatingHeart, 300);
 });
     
+
+// Theme Management
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+
+    // Set dark theme as default
+    body.classList.add('dark-mode');
+    themeToggle.textContent = '☀️'; // sun emoji for light mode option
+    localStorage.setItem('theme', 'dark');
+
+    // Theme toggle functionality
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        // Update button text and save preference
+        if (body.classList.contains('dark-mode')) {
+            themeToggle.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeToggle.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
