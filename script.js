@@ -1,46 +1,5 @@
 // java script is adding the dark and light mode feature ,voice effect on hover and good night,moring stuff etc..
 // Adjust the viewport meta tag for responsive sizing
-//for screen size 
-
-// Add this at the beginning of your script.js file
-function handleMobileResponsiveness() {
-    // Prevent double-tap zoom on buttons
-    document.querySelectorAll('.button').forEach(button => {
-        button.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            const link = e.currentTarget.getAttribute('href');
-            if (link) window.open(link, '_blank');
-        });
-    });
-
-    // Adjust greeting size for mobile
-    const greetingElement = document.querySelector('.description');
-    if (greetingElement && window.innerWidth <= 480) {
-        greetingElement.style.fontSize = '1.4em';
-    }
-
-    // Optimize animations for mobile
-    if (window.innerWidth <= 768) {
-        document.querySelectorAll('.animation').forEach(element => {
-            element.style.animationDuration = '0.5s';
-        });
-    }
-}
-
-// Call the function on load and resize
-window.addEventListener('load', handleMobileResponsiveness);
-window.addEventListener('resize', handleMobileResponsiveness);
-
-// Prevent zoom on double tap for iOS
-let lastTouchEnd = 0;
-document.addEventListener('touchend', (e) => {
-    const now = Date.now();
-    if (now - lastTouchEnd <= 300) {
-        e.preventDefault();
-    }
-    lastTouchEnd = now;
-}, false);
-//other main code 
 function adjustViewport() 
 {
     const viewportMeta = document.querySelector('meta[name="viewport"]');
